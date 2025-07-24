@@ -40,6 +40,8 @@
     ```javascript
     const URL_API_LOAD = 'http://localhost/api'; // Домен или IP адрес где находится api например: https://127.0.0.1:8080/api или https://example.com/api
 
+4. Запустите index.html в браузере или используйте apache, nginx или vscode live server
+
 ## Логин и пароль администратора
     - Номер: 7777777777
     - Пароль: adminadmin
