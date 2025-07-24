@@ -25,7 +25,7 @@
    private static $port = 3306;               // порт MySQL (обычно 3306)
    private static $database = 'api_database'; // имя базы данных
    private static $username = 'root';         // имя пользователя MySQL (рекомендуется не использовать root)
-   private static $password = '';             // пароль пользователя (используйте сложный пароль)
+   private static $password = '';             // пароль пользователя (используйте сложный пароль). Рекомендую от себя использовать HEX 256bit пароль
 
 ## Готовая база данных MySQL лежит в папке api/db.sql просто импортируйте её
 
