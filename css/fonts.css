@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "exoBlack";
+  src: url(../fonts/Exo_2/Exo2-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "exoBold";
+  src: url(../fonts/Exo_2/Exo2-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "exoExtraBold";
+  src: url(../fonts/Exo_2/Exo2-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "exoLight";
+  src: url(../fonts/Exo_2/Exo2-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "exoMedium";
+  src: url(../fonts/Exo_2/Exo2-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "exoSemiBold";
+  src: url(../fonts/Exo_2/Exo2-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "exoRegular";
+  src: url(../fonts/Exo_2/Exo2-Regular.ttf);
+  font-weight: 400;
+}

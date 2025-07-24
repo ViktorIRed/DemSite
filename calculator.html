@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-min.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Миссия компании "Фрегат"</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__top">
+                    <div class="header__logo">
+                        <div class="logo">
+                            <a href="index.html" class="logo__link"><img class="logo__img"
+                                    src="image/icons/header/logo.svg" alt=""></a>
+                        </div>
+                        <div class="header__logo-text">
+                            <h3 class="header__logo-title">"OOO" Фрегат</h3>
+                            <h5 class="header__logo-subtitle">Правильный выбор</h5>
+                        </div>
+                    </div>
+                    <div class="header__contact">
+                        <div id="bid_a_success" class="header__contact-text">
+                            <a href="tel:+73832349988" class="header__contact-link">
+                                <h3 class="header__contact-number">+7 (383) 234 99 88</h3>
+                            </a>
+                        </div>
+                        <a href="admin.html" id="adminBtn" style="display: none;" class="header__contact-btn noneAdmin">
+                            Админ
+                        </a>
+                        <a href="#" id="signin" onclick="openModal()" class="header__contact-btn none is_burger">
+                            Войти
+                        </a>
+                        <a href="#" id="signout" style="display: none;" class="header__contact-btn is_burger">
+                            Выйти
+                        </a>
+                        <div class="burger-icon" onclick="toggleMenu()">&#9776;</div>
+                    </div>
+                </div>
+                <hr class="header__hr">
+                <div class="header__bottom">
+                    <div class="header__drop-menu">
+                        <h4 class="header__drop-title"><a href="index.html#history">История</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#info">Инфо</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#services">Услуги</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#aboutUs">О нас</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#requisites">Реквизиты</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#contact">Контакты</a></h4>
+                        <h4 class="header__drop-title"><a href="calculator.html">Калькулятор</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#gallery">Галерея</a></h4>
+                        <h4 class="header__drop-title"><a href="index.html#reviews">Отзывы</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-menu" id="burgerMenu">
+            <div class="burger-menu__close" onclick="closeMenu()">&times;</div>
+            <div class="burger-menu__top">
+                <div class="burger-menu__contact">
+                    <a href="tel:+73832349988" class="burger-menu__contact-number">+7 (383) 234 99 88</a>
+                </div>
+                <div class="burger-menu__btns">
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#history')">История</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#info')">Инфо</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#services')">Услуги</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#aboutUs')">О нас</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#requisites')">Реквизиты</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#contact')">Контакты</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('calculator.html')">Калькулятор</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#gallery')">Галерея</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('index.html#reviews')">Отзывы</div>
+                </div>
+            </div>
+            <div class="burger-menu__bottom">
+                <div class="burger-menu__btn" id="signinMobile" onclick="openModal()">Войти</div>
+                <div class="burger-menu__btn" id="signoutMobile" style="display: none;">Выйти</div>
+                <div class="burger-menu__btn" id="adminBtn2" style="display: none;"><a href="admin.html">
+                        Админ
+                    </a></div>
+            </div>
+        </div>
+    </header>
+    <section class="calculator">
+        <div class="container">
+            
+        </div>
+        <div class="container">
+            <h2 class="calculator-title">Калькулятор</h2>
+            <div class="window-calculator">
+                <div class="window-calculator__controls">
+                    <div class="control-group">
+                        <div class="control-group__label">Ширина окна (мм): <span class="slider-value"
+                                id="widthValue">1200</span></div>
+                        <div class="slider-container">
+                            <input type="range" id="widthSlider" min="600" max="2400" value="1200" step="100">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-group__label">Высота окна (мм): <span class="slider-value"
+                                id="heightValue">1500</span></div>
+                        <div class="slider-container">
+                            <input type="range" id="heightSlider" min="600" max="2400" value="1500" step="100">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-group__label">Количество секций в раме:</div>
+                        <div class="switcher" id="paneCountSwitcher">
+                            <button class="switcher__button active" data-pane-count="1">1</button>
+                            <button class="switcher__button" data-pane-count="2">2</button>
+                            <button class="switcher__button" data-pane-count="3">3</button>
+                        </div>
+                    </div>
+                    <div class="price-display">Стоимость: <span id="totalPrice">30000</span> ₽</div>
+                </div>
+
+                <div class="window-preview" id="windowPreview">
+                    <div class="window-preview__frame" id="frame"></div>
+                </div>
+            </div>
+
+
+            <script>
+                const widthSlider = document.getElementById('widthSlider');
+                const heightSlider = document.getElementById('heightSlider');
+                const widthValue = document.getElementById('widthValue');
+                const heightValue = document.getElementById('heightValue');
+                const totalPriceDisplay = document.getElementById('totalPrice');
+                const paneCountSwitcher = document.getElementById('paneCountSwitcher');
+                const frame = document.getElementById('frame');
+                const windowPreview = document.getElementById('windowPreview');
+                let paneCount = 1;
+
+                function updateValues() {
+                    const width = parseInt(widthSlider.value);
+                    const height = parseInt(heightSlider.value);
+                    widthValue.textContent = width;
+                    heightValue.textContent = height;
+                    updateWindowPreview(width, height, paneCount);
+                }
+
+                function calculatePrice(width, height, panes) {
+                    const basePricePerPane = 30000;
+                    const priceMultiplier = { 1: 1, 2: 1.8, 3: 2.5 };
+                    return Math.round(basePricePerPane * priceMultiplier[panes] + ((width * height) / 1000) * 5);
+                }
+
+                function updateWindowPreview(width, height, panes) {
+                    frame.innerHTML = '';
+                    const totalWidthPercent = 100;
+                    const gapPercent = 2;
+
+                    if (panes === 1) {
+                        frame.innerHTML = `<div class="window-preview__pane" style="flex: 1 1 100%; height: 100%;"></div>`;
+                    } else if (panes === 2) {
+                        const paneWidth = (totalWidthPercent - gapPercent) / 2;
+                        frame.innerHTML = `
+                            <div class="window-preview__pane" style="flex: 1 1 ${paneWidth}%; height: 100%;"></div>
+                            <div class="window-preview__pane" style="flex: 1 1 ${paneWidth}%; height: 100%;"></div>
+                        `;
+                    } else if (panes === 3) {
+                        const paneWidth = (totalWidthPercent - gapPercent * 2) / 3;
+                        frame.innerHTML = `
+                            <div class="window-preview__pane" style="flex: 1 1 ${paneWidth}%; height: 100%;"></div>
+                            <div class="window-preview__pane" style="flex: 1 1 ${paneWidth}%; height: 100%;"></div>
+                            <div class="window-preview__pane" style="flex: 1 1 ${paneWidth}%; height: 100%;"></div>
+                        `;
+                    }
+
+                    const minWidthPx = 200;
+                    const minHeightPx = 200;
+                    const maxWidthPx = 400;
+                    const maxHeightPx = 400;
+
+                    const previewWidth = Math.max(minWidthPx, Math.min(width / 8, maxWidthPx));
+                    const previewHeight = Math.max(minHeightPx, Math.min(height / 8, maxHeightPx));
+
+                    windowPreview.style.width = `${previewWidth}px`;
+                    windowPreview.style.height = `${previewHeight}px`;
+
+                    const price = calculatePrice(width, height, paneCount);
+                    totalPriceDisplay.textContent = price;
+                }
+
+                paneCountSwitcher.addEventListener('click', e => {
+                    if (e.target.classList.contains('switcher__button')) {
+                        paneCountSwitcher.querySelectorAll('.switcher__button').forEach(btn => btn.classList.remove('active'));
+                        e.target.classList.add('active');
+                        paneCount = parseInt(e.target.dataset.paneCount);
+                        updateWindowPreview(parseInt(widthSlider.value), parseInt(heightSlider.value), paneCount);
+                    }
+                });
+
+                widthSlider.addEventListener('input', updateValues);
+                heightSlider.addEventListener('input', updateValues);
+
+                updateValues();
+            </script>
+        </div>
+    </section>
+
+    <footer class="custom-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <div class="footer-columns">
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Общее
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">О компании</li>
+                                <li class="footer-column-item">Блог</li>
+                                <li class="footer-column-item">Контакты</li>
+                                <li class="footer-column-item">Сотрудничество</li>
+                                <li class="footer-column-item">Акции</li>
+                                <li class="footer-column-item">Написать директору</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Продукция
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">Пластиковые окна</li>
+                                <li class="footer-column-item">Ремонт пластиковых окон</li>
+                                <li class="footer-column-item">Балконы и лоджии</li>
+                                <li class="footer-column-item">Пластиковые двери</li>
+                                <li class="footer-column-item">Аксессуары</li>
+                                <li class="footer-column-item">Цены</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Коллекции
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">ОГРН: 1205400062240</li>
+                                <li class="footer-column-item">ИНН: 5401401746</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Контакты
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item footer-column-icon--location">ул. Вересаева, 111,
+                                    Тула,<br />Тульская обл., 300034</li>
+                                <li class="footer-column-item footer-column-icon--phone">
+                                    <span><a href="tel:+73832349988">+7 (383) 234-99-88</a></span><br />Заказать звонок
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="order-modal-overlay" id="requestModal">
+        <div class="order-modal">
+            <div class="order-modal-header">
+                <h2>Оставить заявку</h2>
+                <button class="order-modal-close" onclick="closeModalOrder()">&times;</button>
+            </div>
+            <div class="order-modal-body">
+                <form class="order-form" id="requestForm">
+                    <div class="order-form-group">
+                        <label for="fullName">ФИО</label>
+                        <input type="text" id="fullNameOrder" placeholder="Иванов Иван Иванович"
+                            oninput="validateFieldOrder(this)">
+                        <div class="order-error-message" id="fullNameOrderError">Введите ваше ФИО</div>
+                    </div>
+
+                    <div class="order-form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="text" id="phoneOrder" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneOrder(this)">
+                        <div class="order-error-message" id="phoneOrderError">Введите корректный телефон</div>
+                    </div>
+
+                    <div class="order-form-group">
+                        <label for="service">Выберите услугу</label>
+                        <select id="serviceOrder" required>
+                            <option value="">Загрузка услуг...</option>
+                        </select>
+                        <div class="order-error-message" id="serviceError">Выберите услугу</div>
+                    </div>
+
+                    <button type="submit" class="order-submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay-sign" id="modalOverlaySign">
+        <div class="modal-sign">
+            <div class="modal-header-sign">
+                <h2 id="modalTitleSign">Вход</h2>
+                <button class="modal-close-sign" onclick="closeModalSign()">&times;</button>
+            </div>
+            <div class="modal-body-sign">
+
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="text" id="phoneSign" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneSign(this)" onblur="formatPhoneSign(this)">
+                        <div class="error-message" id="phoneError">Введите корректный телефон</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="passwordLogin" placeholder="••••••••"
+                            oninput="checkPasswordSign(this)">
+                        <button type="button" class="toggle-password"
+                            onclick="togglePasswordVisibilitySign('passwordLogin')">👁️</button>
+                        <div class="error-message" id="passwordLoginError">Пароль должен быть не менее 6 символов</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Войти</button>
+                    <div class="switch-link">
+                        Нет аккаунта? <a onclick="switchToRegisterSign()">Зарегистрироваться</a>
+                    </div>
+                </form>
+
+                <form id="registerForm" class="auth-form" style="display:none;">
+                    <div class="form-group">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" placeholder="Иванов" oninput="validateFieldSign(this)">
+                        <div class="error-message" id="surnameError">Это поле обязательно</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" placeholder="Иван" oninput="validateFieldSign(this)">
+                        <div class="error-message" id="nameError">Это поле обязательно</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="patronymic">Отчество</label>
+                        <input type="text" id="patronymic" placeholder="Иванович">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPhone">Номер телефона</label>
+                        <input type="text" id="regPhone" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneSign(this)" onblur="formatPhoneSign(this)">
+                        <div class="error-message" id="regPhoneError">Введите корректный телефон</div>
+                    </div>
+                    <div class="form-group position-relative">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" placeholder="••••••••"
+                            oninput="checkPasswordSign(this)">
+                        <button type="button" class="toggle-password"
+                            onclick="togglePasswordVisibilitySign('regPassword')">
+                            👁️
+                        </button>
+                        <div class="error-message" id="regPasswordError">Пароль должен быть не менее 6 символов</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                    <div class="switch-link">
+                        Уже есть аккаунт? <a onclick="switchToLoginSign()">Войти</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/loadconfig.js"></script>
+    <script src="js/swiper-min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app2.js"></script>
+    <script src="js/sign.js"></script>
+    <script src="js/order.js"></script>
+</body>
+
+</html>

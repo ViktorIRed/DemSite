@@ -1,0 +1,15 @@
+:root {
+  --bgColor: rgb(220, 234, 248);
+  --bgColor2: rgb(241, 245, 249);
+  --bgColor3: rgb(61, 125, 189);
+  --brandColor: rgb(47, 128, 237);
+  --border-radius: 15px;
+  --transition-speed: 0.3s;
+  --exo900: "exoBlack";
+  --exo800: "exoExtraBold";
+  --exo700: "exoBold";
+  --exo600: "exoSemiBold";
+  --exo500: "exoMedium";
+  --exo400: "exoRegular";
+  --exo300: "exoLight";
+}

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-min.css" />
+    <link rel="stylesheet" href="css/sign.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/order.css">
+    <title>Фрегат</title>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="spinPreloader"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__top">
+                    <div class="header__logo">
+                        <div class="logo">
+                            <a href="#" class="logo__link"><img class="logo__img" src="image/icons/header/logo.svg"
+                                    alt=""></a>
+                        </div>
+                        <div class="header__logo-text">
+                            <h3 class="header__logo-title">"OOO" Фрегат</h3>
+                            <h5 class="header__logo-subtitle">Правильный выбор</h5>
+                        </div>
+                    </div>
+                    <div class="header__contact">
+                        <div id="bid_a_success" class="header__contact-text">
+                            <a href="tel:+73832349988" class="header__contact-link">
+                                <h3 class="header__contact-number">+7 (383) 234 99 88</h3>
+                            </a>
+                        </div>
+                        <a href="admin.html" id="adminBtn" style="display: none;" class="header__contact-btn noneAdmin">
+                            Админ
+                        </a>
+                        <a href="#" id="signin" onclick="openModal()" class="header__contact-btn none is_burger">
+                            Войти
+                        </a>
+                        <a href="#" id="signout" style="display: none;" class="header__contact-btn is_burger">
+                            Выйти
+                        </a>
+                        <div class="burger-icon" onclick="toggleMenu()">&#9776;</div>
+                    </div>
+                </div>
+                <hr class="header__hr">
+                <div class="header__bottom">
+                    <div class="header__drop-menu">
+                        <h4 class="header__drop-title"><a href="#history">История</a></h4>
+                        <h4 class="header__drop-title"><a href="#info">Инфо</a></h4>
+                        <h4 class="header__drop-title"><a href="#services">Услуги</a></h4>
+                        <h4 class="header__drop-title"><a href="#aboutUs">О нас</a></h4>
+                        <h4 class="header__drop-title"><a href="#requisites">Реквизиты</a></h4>
+                        <h4 class="header__drop-title"><a href="#contact">Контакты</a></h4>
+                        <h4 class="header__drop-title"><a href="calculator.html">Калькулятор</a></h4>
+                        <h4 class="header__drop-title"><a href="#gallery">Галерея</a></h4>
+                        <h4 class="header__drop-title"><a href="#reviews">Отзывы</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-menu" id="burgerMenu">
+            <div class="burger-menu__close" onclick="closeMenu()">&times;</div>
+            <div class="burger-menu__top">
+                <div class="burger-menu__contact">
+                    <a href="tel:+73832349988" class="burger-menu__contact-number">+7 (383) 234 99 88</a>
+                </div>
+                <div class="burger-menu__btns">
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#history')">История</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#info')">Инфо</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#services')">Услуги</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#aboutUs')">О нас</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#requisites')">Реквизиты</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#contact')">Контакты</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('calculator.html')">Калькулятор</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#gallery')">Галерея</div>
+                    <div class="burger-menu__btn" onclick="handleMenuItemClick('#reviews')">Отзывы</div>
+                </div>
+            </div>
+            <div class="burger-menu__bottom">
+                <div class="burger-menu__btn" id="signinMobile" onclick="openModal()">Войти</div>
+                <div class="burger-menu__btn" id="signoutMobile" style="display: none;">Выйти</div>
+                <div class="burger-menu__btn" id="adminBtn2" style="display: none;"><a href="admin.html">
+                        Админ
+                    </a></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div class="container">
+            <div class="navigation">
+                
+            </div>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="swiper image-slider swiper--position">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide--1">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text">
+                                    <h1 class="slider__title">Миссия <br /> компании</h1>
+                                    <h3 class="slider__subtitle">Наша миссия - довольные клиенты, <br /> готовые нас
+                                        рекомендовать!</h3>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--2">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text slider__text--padding">
+                                    <h1 class="slider__title">Пластиковые окна <br /> VEKA напрямую <br /> от
+                                        производителя</h1>
+                                    <h3 class="slider__subtitle">Компания Райт Окна является <br /> официальным,
+                                        сертифицированным <br />
+                                        переработчиком профильных систем <br /> VEKA и WHS.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--3">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text slider__text--padding3">
+                                    <h1 class="slider__title slider__title--color">Думаешь о том <br> сколько будет <br>
+                                        стоить окно? </h1>
+                                    <div class="btn btn--size btn--color btn--slide3 btn--hoverBrandColor"><a
+                                            href="calculator.html">Рассчитать стоимость</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--1">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text">
+                                    <h1 class="slider__title">Миссия <br /> компании</h1>
+                                    <h3 class="slider__subtitle">Наша миссия - довольные клиенты, <br /> готовые нас
+                                        рекомендовать!</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--2">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text slider__text--padding">
+                                    <h1 class="slider__title">Пластиковые окна <br /> VEKA напрямую <br /> от
+                                        производителя</h1>
+                                    <h3 class="slider__subtitle">Компания Райт Окна является <br /> официальным,
+                                        сертифицированным <br />
+                                        переработчиком профильных систем <br /> VEKA и WHS.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide--3">
+                        <div class="container">
+                            <div class="slider__slide">
+                                <div class="slider__text slider__text--padding3">
+                                    <h1 class="slider__title slider__title--color">Думаешь о том <br> сколько будет <br>
+                                        стоить окно? </h1>
+                                    <div class="btn btn--size btn--color btn--slide3 btn--hoverBrandColor"><a
+                                            href="calculator.html">Рассчитать стоимость</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="slider__shadow-left"></div>
+        <div class="slider__shadow-right"></div>
+    </section>
+
+    <section class="historyOfCompany" id="history">
+        <div class="container">
+            <div class="historyOfCompany__wrapper">
+                <div class="historyOfCompany__titleGroup">
+                    <h2 class="title">История <br /> компании</h2>
+                </div>
+                <div class="historyOfCompany__blocks">
+                    <div class="historyOfCompany__textBlock">
+                        <div class="historyOfCompany__bgCircle">
+                            <img class="historyOfCompany__icon" src="image/icons/historyOfCompany/starship.svg" alt="">
+                        </div>
+                        <div class="historyOfCompany__blockContent">
+                            <h4 class="historyOfCompany__subtitle">2017</h4>
+                            <div class="historyOfCompany__text">Компания Фрегат начала свой путь в Туле в 2017
+                                году под названием “Пластика для Окон”</div>
+                        </div>
+                    </div>
+                    <div class="historyOfCompany__textBlock">
+                        <div class="historyOfCompany__bgCircle">
+                            <img class="historyOfCompany__icon" src="image/icons/historyOfCompany/logo.svg" alt="">
+                        </div>
+                        <div class="historyOfCompany__blockContent">
+                            <h4 class="historyOfCompany__subtitle">2021</h4>
+                            <div class="historyOfCompany__text">В 2021 году Компания произвела ребрендинг и изменила
+                                название на “Фрегат”</div>
+                        </div>
+                    </div>
+                    <div class="historyOfCompany__textBlock">
+                        <div class="historyOfCompany__bgCircle">
+                            <img class="historyOfCompany__icon" src="image/icons/historyOfCompany/medal.svg" alt="">
+                        </div>
+                        <div class="historyOfCompany__blockContent">
+                            <h4 class="historyOfCompany__subtitle">2022</h4>
+                            <div class="historyOfCompany__text">Компания является безоговорочным фаворитом в отрасли
+                                Производства, установки и ремонта.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fregat-today" id="info">
+        <div class="container">
+            <div class="fregat-today__wrapper">
+                <div class="fregat-today__left">
+                    <h2 class="title">Компания "OOO" Фрегат <br /> Окна сегодня</h2>
+                    <div class="fregat-today__left-text">
+                        <p class="fregat-today__paragraph">Является безоговорочным фаворитом в отрасли Производства,
+                            установки и ремонта пластиковых окон в
+                            Туле и Тульской области.</p>
+                        <p class="fregat-today__paragraph">Короткая справка о результатах деятельности Компании в
+                            Туле:</p>
+                    </div>
+                </div>
+                <div class="fregat-today__right">
+                    <div class="fregat-today__blocks">
+                        <div class="fregat-today__block">
+                            <div class="fregat-today__block-up">
+                                <div class="fregat-today__block-image">
+                                    <img class="fregat-today__block-img" src="image/img/window/img.png" alt="">
+                                </div>
+                                <div class="fregat-today__block-num">01</div>
+                            </div>
+                            <div class="subtitle">9 000 м2 окон в год</div>
+                            <p class="fregat-today__paragrapH">по статистике за последние 3 года в Туле, Мы
+                                производим и устанавливаем порядка 9 000 м2 пластиковых окон в квартиры и частные дома
+                                ежегодно. Что практически равно 5 000 окон в штуках.</p>
+                        </div>
+                        <div class="fregat-today__block">
+                            <div class="fregat-today__block-up">
+                                <div class="fregat-today__block-image">
+                                    <img class="fregat-today__block-img" src="image/img/window/img1.png" alt="">
+                                </div>
+                                <div class="fregat-today__block-num">02</div>
+                            </div>
+                            <div class="subtitle">3 000 м2 балконов в год</div>
+                            <p class="fregat-today__paragrapH">означает, что ежегодно мы устанавливаем практически 1000
+                                балконов!
+                            </p>
+                        </div>
+                        <div class="fregat-today__block">
+                            <div class="fregat-today__block-up">
+                                <div class="fregat-today__block-image">
+                                    <img class="fregat-today__block-img" src="image/img/window/img2.png" alt="">
+                                </div>
+                                <div class="fregat-today__block-num">03</div>
+                            </div>
+                            <div class="subtitle">340 компаний</div>
+                            <p class="fregat-today__paragrapH">из Тулы работают с нами регулярно. Некоторые из
+                                них: </p>
+                        </div>
+                        <div class="fregat-today__block">
+                            <div class="fregat-today__block-up">
+                                <div class="fregat-today__block-image">
+                                    <img class="fregat-today__block-img" src="image/img/window/img3.png" alt="">
+                                </div>
+                                <div class="fregat-today__block-num">04</div>
+                            </div>
+                            <div class="subtitle">74 сотрудника</div>
+                            <p class="fregat-today__paragrapH">Сплоченный и результативный коллектив главной целью
+                                которого является выполнить свою работу, превзойдя ожидания Клиента. Состоящий из таких
+                                подразделений как:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <h2>НАШИ УСЛУГИ</h2>
+
+        <div id="swiper-main-id" class="swiper-container2">
+            <div class="swiper-wrapper">
+                <!-- Service 1 -->
+                <div class="swiper-slide">
+                    <div class="service-details">
+                        <h3 class="service-title">Установка пластиковых окон и дверей</h3>
+                        <p class="service-description">
+                            Профессиональная установка современных пластиковых окон и дверей с использованием
+                            высококачественных материалов. Наши специалисты гарантируют точность монтажа и долговечность
+                            конструкций.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="swiper-slide">
+                    <div class="service-details">
+                        <h3 class="service-title">Ремонт и регулировка фурнитуры</h3>
+                        <p class="service-description">
+                            Квалифицированный ремонт и регулировка всех типов фурнитуры для пластиковых окон и дверей.
+                            Мы восстанавливаем работоспособность механизмов, обеспечивая герметичность и комфортное
+                            использование.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="swiper-slide">
+                    <div class="service-details">
+                        <h3 class="service-title">Замена стеклопакетов</h3>
+                        <p class="service-description">
+                            Срочная замена стеклопакетов в любое время года. Мы предлагаем качественные решения для
+                            восстановления теплоизоляции и защиты от шума, используя только сертифицированные материалы.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="swiper-slide">
+                    <div class="service-details">
+                        <h3 class="service-title">Утепление и герметизация конструкций</h3>
+                        <p class="service-description">
+                            Комплексные работы по утеплению и герметизации оконных и дверных конструкций. Предотвращаем
+                            потерю тепла и продлеваем срок службы вашего остекления с помощью современных технологий.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="swiper-slide">
+                    <div class="service-details">
+                        <h3 class="service-title">Монтаж балконных блоков</h3>
+                        <p class="service-description">
+                            Профессиональный монтаж балконных блоков, обеспечивающий максимальную безопасность и
+                            комфорт. Мы создаем надежные конструкции, которые защитят ваш балкон от неблагоприятных
+                            погодных условий.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination2"></div>
+
+            <div class="swiper-button-next2"></div>
+            <div class="swiper-button-prev2"></div>
+        </div>
+    </section>
+
+    <section class="info-blocks" id="aboutUs">
+        <div class="container">
+            <div class="info-blocks__wrapper">
+                <div class="info-blocks__cards">
+                    <div class="info-blocks__card">
+                        <div class="info-blocks__image">
+                            <img class="info-blocks__img" src="image/img/info-blocks/Rectangle 330.png" alt="">
+                        </div>
+                        <div class="info-blocks__title subtitle">Благотворительность</div>
+                        <div class="info-blocks__text">
+                            <p class="info-blocks__paragraph">Регулярно наша Компания осуществляет производство и монтаж
+                                пластиковых окон на безвозмездной основе немалому количеству Общественных и Бюджетных
+                                организаций.
+                            </p>
+                            <p class="info-blocks__paragraph">Наша задача в благотворительности - быть примером для
+                                других организаций, благодаря чему
+                                Мы сможем помочь тысячам организаций и учреждений.</p>
+                        </div>
+
+                    </div>
+                    <div class="info-blocks__card">
+                        <div class="info-blocks__image">
+                            <img class="info-blocks__img" src="image/img/info-blocks/veka (1) 1.png" alt="">
+                        </div>
+                        <div class="info-blocks__title subtitle">Официальный партнер <br /> Компании VEKA</div>
+                        <div class="info-blocks__text">
+                            <p class="info-blocks__paragraph">Пластиковые окна VEKA по праву считаются одними из лучших
+                                в мире.
+                                Предложения по продаже пластиковых окон VEKA слышны из сотни компаний Новосибирска и
+                                Кемерово, учитывая это нужно проверить, действительно ли данные компании сертифицированы
+                                заводом VEKA.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="info-blocks__card">
+                        <div class="info-blocks__image">
+                            <img class="info-blocks__img" src="image/img/info-blocks/Rectangle 3300.png" alt="">
+                        </div>
+                        <div class="info-blocks__title subtitle">Производство</div>
+                        <div class="info-blocks__text">
+                            <p class="info-blocks__paragraph">Наша Компания занимает лидирующие позиции в направлении
+                                производства пластиковых окон в Новосибирске и Кемерово, что подтверждается ростом
+                                ежегодной производительности в объемах, в среднем - это
+                            </p>
+                            <p class="subtitle"><span class="info-bocks__span">+37% </span>год от года</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <div class="container mt2">
+            <h2>НАШИ РАБОТЫ</h2>
+
+            <div class="custom-gallery">
+                <div class="custom-gallery-slider swiper">
+                    <div id="swiper-works" class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                    </div>
+                </div>
+                <div class="custom-gallery-pagination"></div>
+                <button class="custom-gallery-button-prev">❮</button>
+                <button class="custom-gallery-button-next">❯</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="reviews-section" id="reviews">
+        <h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
+
+        <div id="reviews-id" class="reviews-container">
+            <div class="review-card">
+                <p class="review-text">Отличная работа! Установили окна быстро и аккуратно. Очень доволен качеством
+                    монтажа.</p>
+                <p class="review-author">— Иван Петров</p>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">Долго выбирали компанию — остановились на этой. Не пожалели ни разу. Все четко!
+                </p>
+                <p class="review-author">— Ольга Смирнова</p>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">Спасибо за оперативную замену стеклопакета. Работают профессионалы!</p>
+                <p class="review-author">— Алексей Николаев</p>
+            </div>
+        </div>
+
+        <section class="comments-section">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+
+            <form id="reviews-send" class="comment-form">
+                <div class="form-group">
+                    <input id="review-name" type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+
+                <div class="form-group">
+                    <input id="review-email" type="email" name="email" placeholder="Email (не будет опубликован)"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="review-message" name="message" rows="5" placeholder="Ваш отзыв..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Отправить отзыв</button>
+            </form>
+        </section>
+    </section>
+
+    <section class="requisites" id="requisites">
+        <div class="container">
+            <div class="requisites__wrapper">
+                <div class="title">Реквизиты</div>
+                <div class="requisites__dillers">
+                    <a class="requisites__diller-btn btn btn-one-diller" href="">
+                        <div class="requisites__diller-block">ООО “Фрегат”</div>
+                    </a>
+                    <a class="requisites__diller-btn btn btn-two-diller" href="">
+                        <div class="requisites__diller-block">Дилеры г. Тула</div>
+                    </a>
+                    <a class="requisites__diller-btn btn btn-three-diller" href="">
+                        <div class="requisites__diller-block">Дилеры г. Москва</div>
+                    </a>
+                    <a class="requisites__diller-btn btn btn-four-diller" href="">
+                        <div class="requisites__diller-block">Дилерские торговые точки</div>
+                    </a>
+                </div>
+                <div class="requisites__bottom">
+                    <div class="requisites__bottom-left">
+                        <div class="subtitle">Контакты ООО «Фрегат»</div>
+                        <div class="requisites__item">
+                            <div class="requisites__icon">
+                                <img class="requisites__image"
+                                    src="image/icons/requisites/Iconly_Light-Outline_Location.png" alt="">
+                            </div>
+                            <div id="req_text" class="requisites__text">ул. Вересаева, 111, Тула,<br />
+                                Тульская обл.</div>
+                        </div>
+                        <div class="requisites__item">
+                            <div class="requisites__icon">
+                                <img class="requisites__image"
+                                    src="image/icons/requisites/Iconly_Light-Outline_Time Circle.png" alt="">
+                            </div>
+                            <div id="req_time" class="requisites__text">
+                                Понедельник - пятница <br />
+                                с 9:00 до 17:00
+                            </div>
+                        </div>
+                        <div class="requisites__item">
+                            <div class="requisites__icon">
+                                <img class="requisites__image"
+                                    src="image/icons/requisites/Iconly_Light-Outline_Message.png" alt="">
+                            </div>
+                            <div class="requisites__text">
+                                info@r-okna.com
+                            </div>
+                        </div>
+                        <div class="requisites__social">
+                            <div class="requisites__social-icon">
+                                <img class="requisites__image" src="image/icons/requisites/face.svg" alt="">
+                            </div>
+                            <div class="requisites__social-icon"><img class="requisites__image"
+                                    src="image/icons/requisites/вк.svg" alt=""></div>
+                            <div class="requisites__social-icon">
+                                <img class="requisites__image" src="image/icons/requisites/инст.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="requisites__right">
+                        <div class="requisites__map" id="reMap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.343609094274!2d37.58417408941452!3d54.19169980175989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413440706a5b2e3f%3A0xf5ef869a9f7442e1!2z0YPQuy4g0JLQtdGA0LXRgdCw0LXQstCwLCAxMTEsINCi0YPQu9CwLCDQotGD0LvRjNGB0LrQsNGPINC-0LHQuy4sIDMwMDAzNA!5e0!3m2!1sru!2sru!4v1743361199446!5m2!1sru!2sru"
+                                width="864" height="288" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="custom-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <div class="footer-columns">
+
+                    <!-- Категория: Общее -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Общее
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">О компании</li>
+                                <li class="footer-column-item">Блог</li>
+                                <li class="footer-column-item">Контакты</li>
+                                <li class="footer-column-item">Сотрудничество</li>
+                                <li class="footer-column-item">Акции</li>
+                                <li class="footer-column-item">Написать директору</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Категория: Продукция -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Продукция
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">Пластиковые окна</li>
+                                <li class="footer-column-item">Ремонт пластиковых окон</li>
+                                <li class="footer-column-item">Балконы и лоджии</li>
+                                <li class="footer-column-item">Пластиковые двери</li>
+                                <li class="footer-column-item">Аксессуары</li>
+                                <li class="footer-column-item">Цены</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Категория: Коллекции -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Коллекции
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item">ОГРН: 1205400062240</li>
+                                <li class="footer-column-item">ИНН: 5401401746</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Категория: Контакты -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" onclick="toggleFooterColumn(this)">
+                            Контакты
+                            <span class="mobile-arrow">▼</span>
+                        </h4>
+                        <div class="footer-column-menu">
+                            <ul class="footer-column-list">
+                                <li class="footer-column-item footer-column-icon--location">ул. Вересаева, 111,
+                                    Тула,<br />Тульская обл., 300034</li>
+                                <li class="footer-column-item footer-column-icon--phone">
+                                    <span><a href="tel:+73832349988">+7 (383) 234-99-88</a></span><br />Заказать звонок
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="order-modal-overlay" id="requestModal">
+        <div class="order-modal">
+            <div class="order-modal-header">
+                <h2>Оставить заявку</h2>
+                <button class="order-modal-close" onclick="closeModalOrder()">&times;</button>
+            </div>
+            <div class="order-modal-body">
+                <form class="order-form" id="requestForm">
+                    <div class="order-form-group">
+                        <label for="fullName">ФИО</label>
+                        <input type="text" id="fullNameOrder" placeholder="Иванов Иван Иванович"
+                            oninput="validateFieldOrder(this)">
+                        <div class="order-error-message" id="fullNameOrderError">Введите ваше ФИО</div>
+                    </div>
+
+                    <div class="order-form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="text" id="phoneOrder" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneOrder(this)">
+                        <div class="order-error-message" id="phoneOrderError">Введите корректный телефон</div>
+                    </div>
+
+                    <div class="order-form-group">
+                        <label for="service">Выберите услугу</label>
+                        <select id="serviceOrder" required>
+                            <option value="">Загрузка услуг...</option>
+                        </select>
+                        <div class="order-error-message" id="serviceError">Выберите услугу</div>
+                    </div>
+
+                    <button type="submit" class="order-submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay-sign" id="modalOverlaySign">
+        <div class="modal-sign">
+            <div class="modal-header-sign">
+                <h2 id="modalTitleSign">Вход</h2>
+                <button class="modal-close-sign" onclick="closeModalSign()">&times;</button>
+            </div>
+            <div class="modal-body-sign">
+
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="text" id="phoneSign" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneSign(this)" onblur="formatPhoneSign(this)">
+                        <div class="error-message" id="phoneError">Введите корректный телефон</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="passwordLogin" placeholder="••••••••"
+                            oninput="checkPasswordSign(this)">
+                        <button type="button" class="toggle-password"
+                            onclick="togglePasswordVisibilitySign('passwordLogin')">👁️</button>
+                        <div class="error-message" id="passwordLoginError">Пароль должен быть не менее 6 символов</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Войти</button>
+                    <div class="switch-link">
+                        Нет аккаунта? <a onclick="switchToRegisterSign()">Зарегистрироваться</a>
+                    </div>
+                </form>
+
+                <form id="registerForm" class="auth-form" style="display:none;">
+                    <div class="form-group">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" placeholder="Иванов" oninput="validateFieldSign(this)">
+                        <div class="error-message" id="surnameError">Это поле обязательно</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" placeholder="Иван" oninput="validateFieldSign(this)">
+                        <div class="error-message" id="nameError">Это поле обязательно</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="patronymic">Отчество</label>
+                        <input type="text" id="patronymic" placeholder="Иванович">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPhone">Номер телефона</label>
+                        <input type="text" id="regPhone" placeholder="+7 (___) ___-__-__"
+                            oninput="formatPhoneSign(this)" onblur="formatPhoneSign(this)">
+                        <div class="error-message" id="regPhoneError">Введите корректный телефон</div>
+                    </div>
+                    <div class="form-group position-relative">
+                        <label for="regPassword">Пароль</label>
+                        <input type="password" id="regPassword" placeholder="••••••••"
+                            oninput="checkPasswordSign(this)">
+                        <button type="button" class="toggle-password"
+                            onclick="togglePasswordVisibilitySign('regPassword')">
+                            👁️
+                        </button>
+                        <div class="error-message" id="regPasswordError">Пароль должен быть не менее 6 символов</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                    <div class="switch-link">
+                        Уже есть аккаунт? <a onclick="switchToLoginSign()">Войти</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/loadconfig.js"></script>
+    <script src="js/swiper-min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app2.js"></script>
+    <script src="js/sign.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

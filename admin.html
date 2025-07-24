@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Админ панель</title>
+</head>
+
+<body>
+    <div id="preloader" style="display: flex; flex-direction: column; background-color: #fff;">
+        <div class="spinPreloader"></div>
+        <h1 style="font-size: 24px;">Проверка прав доступа...</h1>
+    </div>
+    <div class="sidebar">
+        <h2>Панель администратора</h2>
+        <ul class="nav">
+            <li onclick="loadPage('dashboard')">Главная</li>
+            <li onclick="loadPage('users')">Пользователи</li>
+            <li onclick="loadPage('orders')">Заявки</li>
+            <li onclick="loadPage('services')">Услуги</li>
+            <li onclick="loadPage('works')">Наши работы</li>
+            <li onclick="loadPage('reviews')">Отзывы</li>
+        </ul>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header">
+            <h1>Главная</h1>
+        </div>
+        <div class="card">
+            <h3>Последние пользователи</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Номер телефона</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Последние заявки</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ФИО</th>
+                        <th>Номер телефона</th>
+                        <th>Услуга</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script src="js/loadconfig.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
